@@ -59,5 +59,5 @@ public class UserDO {
     /**
      * 删除标识0：未删除 1：已删除
      */
-    private Integer delTag;
+    private Integer delFlag;
 }
