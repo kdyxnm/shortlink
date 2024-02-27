@@ -1,14 +1,12 @@
-package com.nageoffer.shortlink.admin.dto.resp;
+package com.nageoffer.shortlink.admin.dto.req;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.nageoffer.shortlink.admin.common.serialize.PhoneDesensitizationSerializer;
 import lombok.Data;
 
 /**
- * 用户返回脱敏响应参数
+ * 用户修改请求参数
  */
 @Data
-public class UserRespDTO {
+public class UserUpdateReqDTO {
     /**
      * id
      */
@@ -20,6 +18,11 @@ public class UserRespDTO {
     private String username;
 
     /**
+     * 密码
+     */
+    private String password;
+
+    /**
      * 真实姓名
      */
     private String realName;
@@ -27,12 +30,10 @@ public class UserRespDTO {
     /**
      * 手机号
      */
-    @JsonSerialize(using = PhoneDesensitizationSerializer.class)
     private String phone;
 
     /**
      * 电子邮箱
      */
     private String mail;
-
 }
